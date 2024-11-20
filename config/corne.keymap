@@ -9,6 +9,21 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+
+    behaviors {
+        tpmt: tpmt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TPMT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <125>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
