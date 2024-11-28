@@ -17,7 +17,7 @@
   / {
     chosen {
       zephyr,display=&epd;
-      zmk,battery=&vbatt
+      zmk,battery=&vbatt;
     };
 
     vbatt: vbatt {
