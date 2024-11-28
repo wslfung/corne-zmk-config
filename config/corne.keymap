@@ -14,8 +14,11 @@
     status = "disabled";
   };
 
-  chosen {
-      zephyr,display = "&epd";
+  / {
+    chosen {
+      zephyr,display = "&epd";  
+      zmk,battery="&vbatt";
+    };
   };
 
   &pinctrl {
