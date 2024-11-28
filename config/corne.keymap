@@ -17,7 +17,6 @@
   / {
     chosen {
       zephyr,display=&epd;  
-      // zmk,battery=&vbatt;
     };
   };
 
@@ -60,13 +59,6 @@
           cdi = <0xd2>;
           tcon = <0x22>;
       };
-  };
-
-  &vbatt {
-    compatible = "zmk,battery-voltage-divider";
-    io-channels = <&adc 2>;
-    output-ohms =<2000000>;
-    full-ohms = <(2000000 + 806000)>;
   };
 
 
